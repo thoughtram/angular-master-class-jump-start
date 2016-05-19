@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ContactsAppComponent } from './contacts.component';
 import { ContactsHeaderComponent } from './contacts-header';
 import { ContactsListComponent } from './contacts-list';
+import { ContactsDetailComponent } from './contacts-detail';
 import { ContactsService } from './contacts.service';
 import { ContactsAppRoutes } from './app.routes';
 
@@ -11,7 +12,8 @@ import { ContactsAppRoutes } from './app.routes';
   declarations: [
     ContactsAppComponent,
     ContactsHeaderComponent,
-    ContactsListComponent
+    ContactsListComponent,
+    ContactsDetailComponent
   ],
   imports: [
     BrowserModule,

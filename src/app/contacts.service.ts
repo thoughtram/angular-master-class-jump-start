@@ -6,6 +6,10 @@ export class ContactsService {
 
   constructor() {}
 
+  getContact (id: number | string) {
+    return this.getContacts().find(contact => contact.id == id);
+  }
+
   getContacts () {
     return CONTACT_DATA;
   }
