@@ -11,6 +11,7 @@ import { ContactsEditorComponent } from './contacts-editor';
 import { ContactsService } from './contacts.service';
 import { ContactsAppRoutes } from './app.routes';
 import { API_ENDPOINT } from './app.tokens';
+import { APP_PROVIDERS } from './app.providers';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { API_ENDPOINT } from './app.tokens';
   ],
   providers: [
     ContactsService,
-    { provide: API_ENDPOINT, useValue: 'http://localhost:4201/api' }
+    APP_PROVIDERS
   ],
   bootstrap: [ContactsAppComponent]
 })
