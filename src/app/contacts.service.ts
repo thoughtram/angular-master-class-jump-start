@@ -1,11 +1,12 @@
 import { Injectable, Inject } from '@angular/core';
 import { Http } from '@angular/http';
 import { Contact } from './models/contact';
+import { API_ENDPOINT } from './app.tokens';
 
 @Injectable()
 export class ContactsService {
 
-  constructor(private http: Http, @Inject('API_ENDPOINT') private apiEndpoint) {}
+  constructor(private http: Http, @Inject(API_ENDPOINT) private apiEndpoint) {}
 
   getContact(id: string) {
     return this.http.get(`${this.apiEndpoint}/contacts/${id}`)
