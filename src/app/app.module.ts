@@ -25,7 +25,10 @@ import { ContactsAppRoutes } from './app.routes';
     HttpModule,
     FormsModule
   ],
-  providers: [ContactsService],
+  providers: [
+    ContactsService,
+    { provide: 'API_ENDPOINT', useValue: 'http://localhost:4201/api' }
+  ],
   bootstrap: [ContactsAppComponent]
 })
 export class ContactsModule {
