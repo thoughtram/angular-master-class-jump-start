@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Contact } from './models/contact';
-import { CONTACT_DATA } from './data/contact-data';
+import { ContactsService } from './contacts.service';
 
 @Component({
   selector: 'trm-contacts-app',
@@ -15,8 +15,15 @@ import { CONTACT_DATA } from './data/contact-data';
   `,
   styleUrls: ['./app.component.scss']
 })
-export class ContactsAppComponent {
-  contacts: Array<Contact> = CONTACT_DATA;
+export class ContactsAppComponent implements OnInit {
+
+  contacts: Array<Contact>;
+
+  constructor(private contactsService: ContactsService) {}
+
+  ngOnInit () {
+    this.contacts = this.contactsService.getContacts();
+  }
 
   trackByContactId(index, contact) {
     return contact.id;
