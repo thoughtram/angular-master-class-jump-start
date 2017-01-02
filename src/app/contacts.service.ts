@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
+import { API_ENDPOINT } from './app.tokens';
 
 import { Contact } from './models/contact';
 
@@ -13,7 +14,7 @@ interface ContactsResponse { items : Contact[]  }
 @Injectable()
 export class ContactsService {
 
-  constructor(private http: HttpClient, @Inject('API_ENDPOINT') private apiEndpoint) {}
+  constructor(private http: HttpClient, @Inject(API_ENDPOINT) private apiEndpoint) {}
 
 
   getContact(id: string): Observable<Contact> {
