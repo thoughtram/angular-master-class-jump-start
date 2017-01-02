@@ -1,7 +1,7 @@
 <mat-list>
   <a mat-list-item
     [routerLink]="['/contact', contact.id]"
-    *ngFor="let contact of contacts; trackBy:trackByContactId"
+    *ngFor="let contact of contacts$ | async; trackBy:trackByContactId"
     title="View {{contact.name}} details">
 
     <img mat-list-avatar [src]="contact.image" alt="Picture of {{contact.name}}" class="circle">
