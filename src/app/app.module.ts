@@ -14,6 +14,7 @@ import { ContactsDetailComponent } from './contacts-detail/contacts-detail.compo
 import { ContactsService } from './contacts.service';
 
 import { APP_ROUTES } from './app.routes';
+import { API_ENDPOINT } from './app.tokens';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { APP_ROUTES } from './app.routes';
   ],
   providers: [
     ContactsService,
-    { provide: 'API_ENDPOINT', useValue: 'http://localhost:4201/api' }
+    { provide: API_ENDPOINT, useValue: 'http://localhost:4201/api' }
   ],
   bootstrap: [ContactsAppComponent]
 })
