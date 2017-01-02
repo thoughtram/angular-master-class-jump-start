@@ -1,0 +1,28 @@
+<div class="trm-contacts-detail">
+  <mat-card>
+    <mat-card-title-group class="fullBleed">
+      <img mat-card-md-image [src]="contact.image">
+      <mat-card-title>{{contact.name}}</mat-card-title>
+      <mat-card-subtitle>{{contact.email || 'No email address'}}</mat-card-subtitle>
+    </mat-card-title-group>
+    <mat-card-content>
+      <dl>
+        <dt>Phone:</dt>
+        <dd>{{contact.phone || '-'}}</dd>
+        <dt>Website:</dt>
+        <dd>{{contact.website || '-'}}</dd>
+        <dt>Birthday:</dt>
+        <dd>{{contact.birthday || '-'}}</dd>
+        <dt>Street:</dt>
+        <dd>{{contact.address.street || '-'}}</dd>
+        <dt>Zip:</dt>
+        <dd>{{contact.address.zip || '-'}}</dd>
+        <dt>City:</dt>
+        <dd>{{contact.address.city || '-'}}</dd>
+      </dl>
+    </mat-card-content>
+    <mat-card-actions fxLayout fxLayoutAlign="center center">
+      <a mat-button routerLink="/" title="Go back to list">Go Back</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
