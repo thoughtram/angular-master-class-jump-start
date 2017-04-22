@@ -4,6 +4,7 @@
 body, html {
   background-color: #f6f6f6;
   position: relative;
+  font-family: "Roboto";
 }
 
 html, body, trm-contacts-app, md-sidenav-container, .main-content {
@@ -11,3 +12,26 @@ html, body, trm-contacts-app, md-sidenav-container, .main-content {
   width: 100%;
   height: 100%;
 }
+
+trm-dashboard {
+  padding-left: 50px;
+  background: url(/assets/images/taxtAct_bkgrnd.jpg);
+  width: 781px;
+  height: 395px;
+  display: block;
+}
+
+trm-voter {
+  border: 2px solid gray;
+  background-color: rgba(2455, 255, 255, 0.75);
+  width: 84px;
+  min-height: 263px;
+  display: block;
+  border-radius: 20px;
+  position: absolute;
+  left: 543px;
+  top: 108px;
+  padding:20px;
+  padding-left: 0px;
+}
+

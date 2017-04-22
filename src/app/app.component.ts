@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'trm-contacts-app',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'trm-voting-app',
+  template: `
+    <trm-dashboard></trm-dashboard>
+  `,
+  styles: [ ]
 })
-export class ContactsAppComponent {
-  title = 'Angular 2 Master Class setup works!';
+export class AppComponent {
 }
