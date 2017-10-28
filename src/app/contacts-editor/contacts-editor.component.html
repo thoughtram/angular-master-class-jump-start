@@ -1,0 +1,44 @@
+<div class="trm-contacts-editor">
+  <mat-card>
+    <mat-card-title-group class="fullBleed editing">
+      <img mat-card-md-image [src]="contact?.image || ''">
+      <mat-card-title>{{contact?.name}}</mat-card-title>
+      <mat-card-subtitle>{{contact?.email || 'No email address'}}</mat-card-subtitle>
+    </mat-card-title-group>
+    <mat-card-content>
+      <div fxLayout="column">
+        <mat-input-container fxFlex>
+          <input matInput placeholder="Name" name="name" [(ngModel)]="contact.name">
+        </mat-input-container>
+        <mat-input-container fxFlex>
+          <input matInput placeholder="Email" name="email" [(ngModel)]="contact.email">
+        </mat-input-container>
+        <mat-input-container fxFlex>
+          <input matInput placeholder="Phone" name="phone" [(ngModel)]="contact.phone">
+        </mat-input-container>
+        <mat-input-container fxFlex>
+          <input matInput placeholder="Website" name="website" [(ngModel)]="contact.website">
+        </mat-input-container>
+        <mat-input-container fxFlex>
+          <input matInput placeholder="Birthday" name="birthday" [(ngModel)]="contact.birthday" type="date">
+        </mat-input-container>
+        <fieldset fxLayout="column">
+          <legend>Address</legend>
+          <mat-input-container fxFlex>
+            <input matInput placeholder="Street" name="street" [(ngModel)]="contact.address.street">
+          </mat-input-container>
+          <mat-input-container fxFlex>
+            <input matInput placeholder="Zip" name="zip" [(ngModel)]="contact.address.zip">
+          </mat-input-container>
+          <mat-input-container fxFlex>
+            <input matInput placeholder="City" name="city" [(ngModel)]="contact.address.city">
+          </mat-input-container>
+        </fieldset>
+      </div>
+    </mat-card-content>
+    <mat-card-actions fxLayout fxLayoutAlign="center center">
+      <button mat-button type="button" (click)="save(contact)" title="Save contact">Save</button>
+      <button mat-button type="button" (click)="cancel(contact)" title="Cancel editing">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
